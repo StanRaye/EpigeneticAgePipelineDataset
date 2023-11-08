@@ -1,0 +1,17 @@
+Package: dnaMethyAge
+Type: Package
+Title: Predict epigenetic age from DNA methylation data and calculate
+        age acceleration.
+Version: 0.2.0
+Author: Yucheng Wang
+Maintainer: Yucheng Wang <wangyucheng511@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3
+Depends: R (>= 3.5.0)
+Imports: parallel
+Encoding: UTF-8
+LazyData: FALSE
+RoxygenNote: 7.2.3
+NeedsCompilation: no
+Packaged: 2023-10-11 13:07:08 UTC; yuchengw
