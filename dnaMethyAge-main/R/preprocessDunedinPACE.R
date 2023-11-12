@@ -1,6 +1,6 @@
 ######## this script was modified from Daniel Belsky's work (https://github.com/danbelsky/DunedinPACE/blob/main/R/PoAmProjector.R).
 
-preprocessDunedinPACE <- function(betas, ref_means, least_proportion=0.9){
+preprocessDunedinPACE <- function(betas, ref_means, least_proportion=0.7){
   if (!requireNamespace("preprocessCore", quietly = TRUE)){
     BiocManager::install("preprocessCore")
     require("preprocessCore")
@@ -16,7 +16,7 @@ preprocessDunedinPACE <- function(betas, ref_means, least_proportion=0.9){
     #### replace NA with reference mean
     betas <- data.frame(betas, check.names = FALSE)
     betas[missing_p, ] <- NA
-    
+
     ref_means <- ref_means[rownames(betas)]
     for(c in 1:ncol(betas)){
       na_col <- which(is.na(betas[, c]))
